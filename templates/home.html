@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../static/files/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/files/css/lightslider.css">
+    <link rel="stylesheet" href="../static/files/css/style.css">
+
+    <!-- js -->
+    <script src="../static/files/js/bootstrap.js"></script>
+    <script src="../static/files/js/jquery.js"></script>
+    <script src="../static/files/js/lightslider.js"></script>
+    <script src="../static/files/js/script.js"></script>
+
+</head>
+<body>
+    <!-- navbar here -->
+    <!-- jinja2 templating language -->
+    <div class="container-fluid">
+        {% include 'navbar.html' %}
+        <br>
+        {% include 'carousel.html'%}
+        <br>
+
+        <!-- header -->
+        <div class="d-flex bg-warning p-2 m-2">
+            <h5 class="text-white">Fashion</h5>
+            <span class="ms-auto"> <a href="/fashion" class="btn btn-dark">See All</a> </span>
+
+        </div>
+        <!-- end header -->
+
+        <!-- section fashion starts -->
+        <section class="slider p-4">
+            <ul class="css-hidden autoWidth">
+                {% for record in fashion %}
+                <li>
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="../static/images/{{record[6]}}" alt="">
+                            <div class="overlay">
+                                <a href="/single/{{record[0]}}" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- div1 -->
+
+                        <div class="detail-box">
+                            <b>{{record[1]}}</b>
+                            <b class="text-warning">{{record[3]}} KES </b>
+                        </div>
+                        <!-- div2 -->
+
+                    </div>
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </section>
+        <!-- end section fashion -->
+
+
+
+
+        <!-- header -->
+        <div class="d-flex bg-warning p-2 m-2">
+            <h5 class="text-white">Shirts</h5>
+            <span class="ms-auto"> <a href="" class="btn btn-dark">See All</a> </span>
+
+        </div>
+        <!-- end header -->
+        <!-- section shirts starts -->
+        <section class="slider p-4">
+            <ul class="css-hidden autoWidth">
+                {% for record in shirts %}
+                <li>
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="../static/images/{{record[6]}}" alt="">
+                            <div class="overlay">
+                                <a href="/single/{{record[0]}}" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- div1 -->
+
+                        <div class="detail-box">
+                            <b>{{record[1]}}</b>
+                            <b class="text-warning">{{record[3]}} KES </b>
+                        </div>
+                        <!-- div2 -->
+
+                    </div>
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </section>
+        <!-- end shirts fashion -->
+
+
+        <!-- header -->
+        <div class="d-flex bg-warning p-2 m-2">
+            <h5 class="text-white">Shoes</h5>
+            <span class="ms-auto"> <a href="/shoes" class="btn btn-dark">See All</a> </span>
+
+        </div>
+        <!-- end header -->
+        
+
+        <!-- section shoes starts -->
+        <section class="slider p-4">
+            <ul class="css-hidden autoWidth">
+                {% for record in shoes %}
+                <li>
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="../static/images/{{record[6]}}" alt="">
+                            <div class="overlay">
+                                <a href="/single/{{record[0]}}" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- div1 -->
+
+                        <div class="detail-box">
+                            <b>{{record[1]}}</b>
+                            <b class="text-warning">{{record[3]}} KES </b>
+                        </div>
+                        <!-- div2 -->
+
+                    </div>
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </section>
+        <!-- end section shoes -->
+
+
+
+        <!-- header -->
+        <div class="d-flex bg-warning p-2 m-2">
+            <h5 class="text-white">Electronics</h5>
+            <span class="ms-auto"> <a href="" class="btn btn-dark">See All</a> </span>
+
+        </div>
+
+        <!-- end header -->
+        <!-- section electronics starts -->
+        <section class="slider p-4">
+            <ul class="css-hidden autoWidth">
+                {% for record in electronics %}
+                <li>
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="../static/images/{{record[6]}}" alt="">
+                            <div class="overlay">
+                                <a href="/single/{{record[0]}}" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- div1 -->
+
+                        <div class="detail-box">
+                            <b>{{record[1]}}</b>
+                            <b class="text-warning">{{record[3]}} KES </b>
+                        </div>
+                        <!-- div2 -->
+
+                    </div>
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </section>
+        <!-- end section electronics -->
+
+
+        <!-- header -->
+        <div class="d-flex bg-warning p-2 m-2">
+            <h5 class="text-white">Watches</h5>
+            <span class="ms-auto"> <a href="#" class="btn btn-dark">See All</a> </span>
+
+        </div>
+        <!-- end header -->
+        <!-- section watches starts -->
+        <section class="slider p-4">
+            <ul class="css-hidden autoWidth">
+                {% for record in watches %}
+                <li>
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="../static/images/{{record[6]}}" alt="">
+                            <div class="overlay">
+                                <a href="/single/{{record[0]}}" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- div1 -->
+
+                        <div class="detail-box">
+                            <b>{{record[1]}}</b>
+                            <b class="text-warning">{{record[3]}} KES </b>
+                        </div>
+                        <!-- div2 -->
+
+                    </div>
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </section>
+        <!-- end section watches -->
+
+    </div>
+    
+
+    
+    
+</body>
+</html>
